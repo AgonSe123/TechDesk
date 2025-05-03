@@ -1,0 +1,164 @@
+/* About Page Styles */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--light);
+}
+
+.about-hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+.about-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #fff, var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.team-section {
+    margin-bottom: 4rem;
+}
+
+.team-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary);
+    position: relative;
+    display: inline-block;
+}
+
+.team-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+}
+
+.team-description p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.team-members {
+    margin: 3rem 0;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.member-card {
+    background: var(--dark-gray);
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.member-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+    font-size: 2rem;
+}
+.member-avatar img {
+    width: 6rem;
+    border-radius: 50%;
+}
+
+.member-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-card p {
+    color: var(--light-gray);
+    font-size: 0.9rem;
+}
+
+.mission-section {
+    background: var(--darker);
+    padding: 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.mission-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary);
+}
+
+.mission-section p {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.7;
+}
+
+.mission-section .btn {
+    margin-top: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 3rem 1rem;
+    }
+    
+    .about-hero h2 {
+        font-size: 2rem;
+    }
+    
+    .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .mission-section {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .team-section h3 {
+        font-size: 1.5rem;
+    }
+}

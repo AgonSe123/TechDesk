@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | ChatDesk</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <h1>ChatDesk <span class="admin-badge">Admin</span></h1>
+            </div>
+            <div class="nav-links">
+                <a href="chat.html">Live Chat</a>
+                <a href="admin.html" class="active">Dashboard</a>
+                <a href="profile.html">Profile</a>
+                <a href="#" id="logout-btn" class="btn nav-btn">Log Out</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+        <section class="admin-stats">
+            <div class="stat-card">
+                <i class="fas fa-comments"></i>
+                <h3>1,248</h3>
+                <p>Today's Chats</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-ticket-alt"></i>
+                <h3>56</h3>
+                <p>Open Tickets</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <h3>89%</h3>
+                <p>Satisfaction</p>
+            </div>
+        </section>
+
+        <section class="admin-tables">
+            <div class="recent-chats">
+                <h3><i class="fas fa-history"></i> Recent Conversations</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Last Message</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filled by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="user-management">
+                <h3><i class="fas fa-user-cog"></i> User Management</h3>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search users...">
+                    <button class="btn primary"><i class="fas fa-search"></i></button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filled by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/admin.js"></script>
+</body>
+</html>

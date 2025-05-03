@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatDesk - Live Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <h1>ChatDesk</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="btn nav-btn">Back to Home</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="chat-app-container">
+        <!-- Sidebar -->
+        <aside class="chat-sidebar">
+            <button id="new-chat-btn" class="btn primary">
+                <i class="fas fa-plus"></i> New Chat
+            </button>
+            
+            <div class="chat-history">
+                <h3>Chat History</h3>
+                <div class="history-list">
+                    <!-- Sample chat history items -->
+                    <div class="history-item active">
+                        <i class="fas fa-comment-dots"></i>
+                        <span>Current Conversation</span>
+                    </div>
+                    <div class="history-item">
+                        <i class="fas fa-comment"></i>
+                        <span>Billing Question</span>
+                        <small>Yesterday</small>
+                    </div>
+                    <div class="history-item">
+                        <i class="fas fa-comment"></i>
+                        <span>Feature Request</span>
+                        <small>2 days ago</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-info">
+                        <strong>User Name</strong>
+                        <small>user@example.com</small>
+                    </div>
+                </div>
+                <button id="settings-btn" class="icon-btn">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <section class="chat-interface">
+            <div class="chat-header">
+                <button id="sidebar-toggle" class="icon-btn mobile-only">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h2>AI Support Assistant</h2>
+                <p>How can I help you today?</p>
+            </div>
+            
+            <div class="chat-messages">
+                <div class="message ai-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Hello! I'm your AI support assistant. Ask me anything about our products or services.</p>
+                        <div class="message-time">Just now</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <div class="input-actions">
+                    <button class="icon-btn" title="Attach file">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <button class="icon-btn" title="Send feedback">
+                        <i class="fas fa-smile"></i>
+                    </button>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message here..." id="user-input">
+                    <button id="send-button" class="btn primary">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/chat.js"></script>
+</body>
+</html>

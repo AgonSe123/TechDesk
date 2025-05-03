@@ -1,0 +1,160 @@
+/* Page Structure */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--dark);
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contact Container */
+.contact-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--light);
+    flex: 1;
+}
+
+/* Contact Hero Section */
+.contact-hero {
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.contact-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.team-email {
+    margin-top: 1.5rem;
+}
+
+.team-email a {
+    color: var(--light);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.team-email a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.team-email i {
+    margin-right: 0.5rem;
+    color: var(--secondary);
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    background: var(--darker);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary);
+    text-align: center;
+}
+
+/* Form Styles */
+.form-group {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: 2px solid var(--medium-gray);
+    border-radius: 4px;
+    color: var(--light);
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary);
+}
+
+.contact-form label {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    background: var(--darker);
+    padding: 0 5px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--light-gray);
+    pointer-events: none;
+}
+
+.contact-form input:focus + label,
+.contact-form textarea:focus + label {
+    transform: translateY(-25px);
+    color: var(--primary);
+}
+
+.contact-form input:not(:placeholder-shown) + label,
+.contact-form textarea:not(:placeholder-shown) + label {
+    transform: translateY(-25px);
+    color: var(--primary);
+}
+
+.contact-form .btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 1rem;
+    }
+    
+    .contact-hero h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-form-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .team-email a {
+        font-size: 1rem;
+    }
+}
